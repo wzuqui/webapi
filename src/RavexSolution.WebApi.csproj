@@ -7,10 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3"/>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="Resources\Strings.resx" />
+        <EmbeddedResource Remove="Resources\Strings.resx"/>
     </ItemGroup>
 </Project>

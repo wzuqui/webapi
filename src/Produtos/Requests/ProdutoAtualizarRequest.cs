@@ -4,14 +4,10 @@ namespace RavexSolution.WebApi.Produtos.Requests
 {
     public class ProdutoAtualizarRequest
     {
-        [Required]
-        [StringLength(200)]
-        public string Nome { get; set; }
+        [Required] [StringLength(200)] public string Nome { get; init; }
 
-        [StringLength(2000)]
-        public string Descricao { get; set; }
+        [StringLength(2000)] public string Descricao { get; init; }
 
-        [Range(0, 1000)]
-        public decimal Valor { get; set; }
+        [Range(0, 1000)] public decimal Valor { get; init; }
     }
 }

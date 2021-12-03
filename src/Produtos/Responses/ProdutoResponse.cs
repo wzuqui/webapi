@@ -6,10 +6,10 @@ namespace RavexSolution.WebApi.Produtos.Responses
 {
     public class ProdutoResponse
     {
-        public string Descricao { get; set; }
+        public string Descricao { get; init; }
         public int Id { get; init; }
-        public string Nome { get; set; }
-        public decimal Valor { get; set; }
+        public string Nome { get; init; }
+        public decimal Valor { get; init; }
 
         public static IEnumerable<ProdutoResponse> Mapper(IEnumerable<Produto> pItens)
         {
@@ -20,10 +20,7 @@ namespace RavexSolution.WebApi.Produtos.Responses
         {
             return new ProdutoResponse
             {
-                Id = pItem.Id
-                , Nome = pItem.Nome
-                , Descricao = pItem.Descricao
-                , Valor = pItem.Valor
+                Id = pItem.Id, Nome = pItem.Nome, Descricao = pItem.Descricao, Valor = pItem.Valor
             };
         }
     }

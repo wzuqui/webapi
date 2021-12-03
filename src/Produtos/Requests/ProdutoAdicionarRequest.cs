@@ -5,19 +5,17 @@ namespace RavexSolution.WebApi.Produtos.Requests
 {
     public class ProdutoAdicionarRequest
     {
-        [StringLength(2000)] public string Descricao { get; set; }
+        [StringLength(2000)] public string Descricao { get; init; }
 
-        [Required] [StringLength(200)] public string Nome { get; set; }
+        [Required] [StringLength(200)] public string Nome { get; init; }
 
-        [Range(0, 1000)] public decimal Valor { get; set; }
+        [Range(0, 1000)] public decimal Valor { get; init; }
 
         public static Produto Mapper(ProdutoAdicionarRequest pRequest)
         {
             return new Produto
             {
-                Nome = pRequest.Nome
-                , Descricao = pRequest.Descricao
-                , Valor = pRequest.Valor
+                Nome = pRequest.Nome, Descricao = pRequest.Descricao, Valor = pRequest.Valor
             };
         }
     }

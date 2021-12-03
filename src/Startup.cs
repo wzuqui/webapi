@@ -24,8 +24,7 @@ namespace RavexSolution.WebApi
             {
                 p.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "RavexSolution.WebApi"
-                    , Version = "v1"
+                    Title = "RavexSolution.WebApi", Version = "v1"
                 });
             });
         }
