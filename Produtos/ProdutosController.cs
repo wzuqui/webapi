@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Xml;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Logging;
 using RavexSolution.WebApi.Entities;
 using RavexSolution.WebApi.Extensions;
-using RavexSolution.WebApi.Requests;
-using RavexSolution.WebApi.Responses;
+using RavexSolution.WebApi.Produtos.Requests;
+using RavexSolution.WebApi.Produtos.Responses;
 
-namespace RavexSolution.WebApi.Controllers
+namespace RavexSolution.WebApi.Produtos
 {
     [ApiController]
     [Route("produtos")]
-    public class ProdutoController : ControllerBase
+    public class ProdutosController : ControllerBase
     {
         private static readonly List<Produto> _produtos = new();
 

@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RavexSolution.WebApi.DataAnnotations;
 using RavexSolution.WebApi.Entities;
 
-namespace RavexSolution.WebApi.Requests
+namespace RavexSolution.WebApi.Produtos.Requests
 {
     public class ProdutoAdicionarRequest
     {

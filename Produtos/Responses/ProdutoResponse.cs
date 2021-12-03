@@ -2,11 +2,11 @@
 using System.Linq;
 using RavexSolution.WebApi.Entities;
 
-namespace RavexSolution.WebApi.Responses
+namespace RavexSolution.WebApi.Produtos.Responses
 {
     public class ProdutoResponse
     {
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Valor { get; set; }

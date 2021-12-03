@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RavexSolution.WebApi.DataAnnotations;
 
-namespace RavexSolution.WebApi.Requests
+namespace RavexSolution.WebApi.Produtos.Requests
 {
     public class ProdutoAtualizarRequest
     {

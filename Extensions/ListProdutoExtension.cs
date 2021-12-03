@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RavexSolution.WebApi.Entities;
-using RavexSolution.WebApi.Requests;
+using RavexSolution.WebApi.Produtos.Requests;
 
 namespace RavexSolution.WebApi.Extensions
 {
     public static class ListProdutoExtension
     {
-        public static Produto Adicionar(this List<Produto> pItens, Produto pItem)
+        public static Produto Adicionar(this List<Produto> pItens
+            , Produto pItem)
         {
             var xId = pItens.Count + 1;
             pItem.Id = xId;
@@ -15,7 +16,8 @@ namespace RavexSolution.WebApi.Extensions
             return pItem;
         }
 
-        public static Produto Atualizar(this List<Produto> pItens, int pId, ProdutoAtualizarRequest pItem)
+        public static Produto Atualizar(this IEnumerable<Produto> pItens
+            , int pId, ProdutoAtualizarRequest pItem)
         {
             var xPersistido = pItens.FirstOrDefault(p => p.Id == pId);
             if (xPersistido == null) // FailFast
@@ -27,11 +29,12 @@ namespace RavexSolution.WebApi.Extensions
             return xPersistido;
         }
 
-        public static bool Remover(this List<Produto> pItens, int pId)
+        public static bool Remover(this List<Produto> pItens
+            , int pId)
         {
-            var xPersistido = pItens.FirstOrDefault(p => p.Id == pId); // Proposital pois parece com repository
+            var xPersistido = pItens.FirstOrDefault(p => p.Id == pId); // proposital, pois parece com repository
 
-            // Legibilidade
+            // legibilidade
             // ReSharper disable once ConvertIfStatementToReturnStatement
             if (xPersistido == null) // FailFast
                 return false;
