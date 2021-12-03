@@ -17,7 +17,8 @@ namespace RavexSolution.WebApi.Extensions
         }
 
         public static Produto Atualizar(this IEnumerable<Produto> pItens
-            , int pId, ProdutoAtualizarRequest pItem)
+            , int pId
+            , ProdutoAtualizarRequest pItem)
         {
             var xPersistido = pItens.FirstOrDefault(p => p.Id == pId);
             if (xPersistido == null) // FailFast

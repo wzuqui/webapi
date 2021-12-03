@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RavexSolution.WebApi", "RavexSolution.WebApi.csproj", "{B832E133-F131-4420-834F-BFCDB8ECA9D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B5260F6-046B-4491-8A2E-8E0DD9E680E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavexSolution.WebApi", "src\RavexSolution.WebApi.csproj", "{DF3948F9-00CE-4A6B-806A-99EE5225D01C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B832E133-F131-4420-834F-BFCDB8ECA9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B832E133-F131-4420-834F-BFCDB8ECA9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B832E133-F131-4420-834F-BFCDB8ECA9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B832E133-F131-4420-834F-BFCDB8ECA9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3948F9-00CE-4A6B-806A-99EE5225D01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3948F9-00CE-4A6B-806A-99EE5225D01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3948F9-00CE-4A6B-806A-99EE5225D01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3948F9-00CE-4A6B-806A-99EE5225D01C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FA73DCF-E748-48D4-A49A-D39A54F50604}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF3948F9-00CE-4A6B-806A-99EE5225D01C} = {1B5260F6-046B-4491-8A2E-8E0DD9E680E0}
 	EndGlobalSection
 EndGlobal

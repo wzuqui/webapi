@@ -15,6 +15,17 @@ namespace RavexSolution.WebApi.Produtos
     {
         private static readonly List<Produto> _produtos = new();
 
+        [HttpDelete("{pId:int}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult Delete(int pId)
+        {
+            var xRemoveu = _produtos.Remover(pId);
+            return xRemoveu
+                ? NoContent()
+                : NotFound();
+        }
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<ProdutoResponse>> Get()
@@ -52,7 +63,8 @@ namespace RavexSolution.WebApi.Produtos
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Put(int pId, [FromBody] ProdutoAtualizarRequest pRequest)
+        public IActionResult Put(int pId
+            , [FromBody] ProdutoAtualizarRequest pRequest)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
@@ -61,17 +73,6 @@ namespace RavexSolution.WebApi.Produtos
             return xItem is null
                 ? NotFound()
                 : NoContent();
-        }
-
-        [HttpDelete("{pId:int}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Delete(int pId)
-        {
-            var xRemoveu = _produtos.Remover(pId);
-            return xRemoveu
-                ? NoContent()
-                : NotFound();
         }
     }
 }

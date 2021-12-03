@@ -7,20 +7,24 @@ namespace RavexSolution.WebApi.DataAnnotations
     {
         private const string _ERROR_MESSAGE = "O campo {0} deve estar entre {1} e {2}.";
 
-        public RangeAttribute(double minimum, double maximum)
-            : base(minimum, maximum)
+        public RangeAttribute(double pMinimum
+            , double pMaximum)
+            : base(pMinimum, pMaximum)
         {
             ErrorMessage = _ERROR_MESSAGE;
         }
 
-        public RangeAttribute(int minimum, int maximum)
-            : base(minimum, maximum)
+        public RangeAttribute(int pMinimum
+            , int pMaximum)
+            : base(pMinimum, pMaximum)
         {
             ErrorMessage = _ERROR_MESSAGE;
         }
 
-        public RangeAttribute(Type type, string minimum, string maximum)
-            : base(type, minimum, maximum)
+        public RangeAttribute(Type pType
+            , string pMinimum
+            , string pMaximum)
+            : base(pType, pMinimum, pMaximum)
         {
             ErrorMessage = _ERROR_MESSAGE;
         }
