@@ -56,7 +56,9 @@ namespace RavexSolution.WebApi.Produtos
             var xItem = _produtos.Adicionar(xRequest);
             var xResponse = ProdutoResponse.Mapper(xItem);
 
-            return CreatedAtAction(nameof(Get), new { pId = xResponse.Id }, xResponse);
+            return CreatedAtAction(nameof(Get)
+                , new { pId = xResponse.Id }
+                , xResponse);
         }
 
         [HttpPut("{pId:int}")]
@@ -69,7 +71,8 @@ namespace RavexSolution.WebApi.Produtos
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var xItem = _produtos.Atualizar(pId, pRequest);
+            var xItem = _produtos.Atualizar(pId
+                , pRequest);
             return xItem is null
                 ? NotFound()
                 : NoContent();

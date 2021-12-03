@@ -7,7 +7,9 @@ namespace RavexSolution.WebApi
     {
         public static void Main(string[] pArgs)
         {
-            CreateHostBuilder(pArgs).Build().Run();
+            CreateHostBuilder(pArgs)
+                .Build()
+                .Run();
         }
 
         private static IHostBuilder CreateHostBuilder(string[] pArgs)

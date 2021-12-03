@@ -19,13 +19,18 @@ namespace RavexSolution.WebApi
 
         public void ConfigureServices(IServiceCollection pServices)
         {
-            pServices.AddControllers();
+            pServices
+                .AddControllers()
+                .AddXmlDataContractSerializerFormatters();
+
             pServices.AddSwaggerGen(p =>
             {
-                p.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "RavexSolution.WebApi", Version = "v1"
-                });
+                p.SwaggerDoc("v1"
+                    , new OpenApiInfo
+                    {
+                        Title = "RavexSolution.WebApi"
+                        , Version = "v1"
+                    });
             });
         }
     }

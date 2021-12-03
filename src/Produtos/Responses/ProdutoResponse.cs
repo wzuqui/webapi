@@ -20,7 +20,10 @@ namespace RavexSolution.WebApi.Produtos.Responses
         {
             return new ProdutoResponse
             {
-                Id = pItem.Id, Nome = pItem.Nome, Descricao = pItem.Descricao, Valor = pItem.Valor
+                Id = pItem.Id
+                , Nome = pItem.Nome
+                , Descricao = pItem.Descricao
+                , Valor = pItem.Valor
             };
         }
     }
