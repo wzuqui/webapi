@@ -11,7 +11,7 @@ namespace RavexSolution.WebApi.Produtos.Requests
         [StringLength(2000)]
         public string Descricao { get; init; }
 
-        [Range(0, 1000)]
+        [Range(0, int.MaxValue)]
         public decimal Valor { get; init; }
     }
 }

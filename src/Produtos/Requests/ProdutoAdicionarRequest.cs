@@ -12,7 +12,7 @@ namespace RavexSolution.WebApi.Produtos.Requests
         [StringLength(200)]
         public string Nome { get; init; }
 
-        [Range(0, 1000)]
+        [Range(0, int.MaxValue)]
         public decimal Valor { get; init; }
 
         public static Produto Mapper(ProdutoAdicionarRequest pRequest)
