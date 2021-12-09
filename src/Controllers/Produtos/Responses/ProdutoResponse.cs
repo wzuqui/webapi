@@ -2,7 +2,7 @@
 using System.Linq;
 using RavexSolution.WebApi.Entities;
 
-namespace RavexSolution.WebApi.Produtos.Responses
+namespace RavexSolution.WebApi.Controllers.Produtos.Responses
 {
     public class ProdutoResponse
     {

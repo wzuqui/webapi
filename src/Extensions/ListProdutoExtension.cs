@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using RavexSolution.WebApi.Controllers.Produtos.Requests;
 using RavexSolution.WebApi.Entities;
-using RavexSolution.WebApi.Produtos.Requests;
 
 namespace RavexSolution.WebApi.Extensions
 {

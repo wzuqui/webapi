@@ -2,12 +2,12 @@
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RavexSolution.WebApi.Controllers.Produtos.Requests;
+using RavexSolution.WebApi.Controllers.Produtos.Responses;
 using RavexSolution.WebApi.Entities;
 using RavexSolution.WebApi.Extensions;
-using RavexSolution.WebApi.Produtos.Requests;
-using RavexSolution.WebApi.Produtos.Responses;
 
-namespace RavexSolution.WebApi.Produtos
+namespace RavexSolution.WebApi.Controllers.Produtos
 {
     [ApiController]
     [Route("produtos")]

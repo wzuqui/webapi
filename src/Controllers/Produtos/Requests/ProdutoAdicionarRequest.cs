@@ -1,7 +1,7 @@
 ﻿using RavexSolution.WebApi.DataAnnotations;
 using RavexSolution.WebApi.Entities;
 
-namespace RavexSolution.WebApi.Produtos.Requests
+namespace RavexSolution.WebApi.Controllers.Produtos.Requests
 {
     public class ProdutoAdicionarRequest
     {
