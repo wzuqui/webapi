@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ravexsolution.webapi:
+    image: ${DOCKER_REGISTRY-}ravexsolutionwebapi
+    build:
+      context: .
+      dockerfile: src/Dockerfile

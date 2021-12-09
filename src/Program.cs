@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace RavexSolution.WebApi
 {
@@ -15,7 +16,12 @@ namespace RavexSolution.WebApi
         private static IHostBuilder CreateHostBuilder(string[] pArgs)
         {
             return Host.CreateDefaultBuilder(pArgs)
-                .ConfigureWebHostDefaults(pWebBuilder => { pWebBuilder.UseStartup<Startup>(); });
+                .ConfigureWebHostDefaults(pWebBuilder => pWebBuilder.UseStartup<Startup>())
+                .UseSerilog((pBuilder
+                    , pConfiguration) =>
+                {
+                    pConfiguration.ReadFrom.Configuration(pBuilder.Configuration);
+                });
         }
     }
 }
